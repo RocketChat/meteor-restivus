@@ -58,7 +58,7 @@ and is built on top of [Simple JSON Routes][json-routes] to provide:
   - [Upgrading to 0.7.0](#upgrading-to-070)
   - [Upgrading to 0.6.1](#upgrading-to-061)
 - [Resources](#resources)
-  - [Plugins](#plugins) 
+  - [Plugins](#plugins)
   - [Change Log](#change-log)
   - [Contributing](#contributing)
 
@@ -68,7 +68,7 @@ and is built on top of [Simple JSON Routes][json-routes] to provide:
 
 You can install Restivus using Meteor's package manager:
 ```bash
-> meteor add nimble:restivus
+> meteor add rocketchat:restivus
 ```
 
 ## Quick Start
@@ -238,11 +238,11 @@ The following configuration options are available when initializing an API using
           returned, any `userId` and `token` will be ignored, as it's assumed that you have already
           successfully authenticated the user (by whatever means you deem necessary). The given user
           is simply attached to the [endpoint context](#endpoint-context), no questions asked.
-          
-      For either level of auth described above, you can optionally return a custom error response by 
-      providing that response in an `error` field of your response object. The `error` value can be 
-      [any valid response](#response-data). If an `error` field exists in the object returned from 
-      your custom auth function, all other fields will be ignored. Do **not** provide an `error` 
+
+      For either level of auth described above, you can optionally return a custom error response by
+      providing that response in an `error` field of your response object. The `error` value can be
+      [any valid response](#response-data). If an `error` field exists in the object returned from
+      your custom auth function, all other fields will be ignored. Do **not** provide an `error`
       value if you intend for the authentication to pass successfully.
 
 ##### `defaultHeaders`
@@ -310,7 +310,7 @@ The following configuration options are available when initializing an API using
     });
     ```
 
-Here's a sample configuration with the complete set of options: 
+Here's a sample configuration with the complete set of options:
 
 **Warning! For demo purposes only - using this configuration is not recommended!**
 
@@ -1225,17 +1225,17 @@ curl -H "X-Auth-Token: f2KpRW7KeN9aPmjSZ" -H "X-User-Id: fbdpsNf4oHiX79vMJ" http
 
 To update Restivus to the latest version:
 ```bash
-> meteor update nimble:restivus
+> meteor update rocketchat:restivus
 ```
 
 Or to update Restivus to a specific version:
 ```bash
-> meteor add nimble:restivus@=<version_number>
+> meteor add rocketchat:restivus@=<version_number>
 ```
 
 For example, to update restivus to v0.7.0:
 ```bash
-> meteor add nimble:restivus@=0.7.0
+> meteor add rocketchat:restivus@=0.7.0
 ```
 
 Please check the [change log][restivus-change-log] before updating, for more information about the

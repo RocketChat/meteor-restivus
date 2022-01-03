@@ -1,21 +1,21 @@
 Package.describe({
-  name: 'nimble:restivus',
+  name: 'rocketchat:restivus',
   summary: 'Create authenticated REST APIs in Meteor 0.9+ via HTTP/HTTPS. Setup CRUD endpoints for Collections.',
-  version: '0.8.12',
+  version: '1.0.0',
   git: 'https://github.com/kahmali/meteor-restivus.git'
 });
 
 
 Package.onUse(function (api) {
   // Minimum Meteor version
-  api.versionsFrom('METEOR@0.9.0');
+  api.versionsFrom('2.5');
 
   // Meteor dependencies
   api.use('check');
   api.use('coffeescript');
   api.use('underscore');
-  api.use('accounts-password@1.3.3');
-  api.use('simple:json-routes@2.1.0');
+  api.use('accounts-password');
+  api.use('simple:json-routes');
 
   api.addFiles('lib/auth.coffee', 'server');
   api.addFiles('lib/iron-router-error-to-response.js', 'server');
@@ -31,7 +31,7 @@ Package.onTest(function (api) {
   // Meteor dependencies
   api.use('practicalmeteor:munit');
   api.use('test-helpers');
-  api.use('nimble:restivus');
+  api.use('rocketchat:restivus');
   api.use('http');
   api.use('coffeescript');
   api.use('underscore');
