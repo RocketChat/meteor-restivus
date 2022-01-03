@@ -12,10 +12,10 @@ Package.onUse(function (api) {
 
   // Meteor dependencies
   api.use('check');
-  api.use('coffeescript');
+  api.use('coffeescript@2.4.1');
   api.use('underscore');
   api.use('accounts-password');
-  api.use('simple:json-routes');
+  api.use('simple:json-routes@2.3.1');
 
   api.addFiles('lib/auth.coffee', 'server');
   api.addFiles('lib/iron-router-error-to-response.js', 'server');
@@ -27,21 +27,21 @@ Package.onUse(function (api) {
 });
 
 
-Package.onTest(function (api) {
-  // Meteor dependencies
-  api.use('practicalmeteor:munit');
-  api.use('test-helpers');
-  api.use('rocketchat:restivus');
-  api.use('http');
-  api.use('coffeescript');
-  api.use('underscore');
-  api.use('accounts-base');
-  api.use('accounts-password');
-  api.use('mongo');
+// Package.onTest(function (api) {
+//   // Meteor dependencies
+//   api.use('practicalmeteor:munit');
+//   api.use('test-helpers');
+//   api.use('rocketchat:restivus');
+//   api.use('http');
+//   api.use('coffeescript');
+//   api.use('underscore');
+//   api.use('accounts-base');
+//   api.use('accounts-password');
+//   api.use('mongo');
 
-  api.addFiles('lib/route.coffee', 'server');
-  api.addFiles('test/api_tests.coffee', 'server');
-  api.addFiles('test/route_unit_tests.coffee', 'server');
-  api.addFiles('test/authentication_tests.coffee', 'server');
-  api.addFiles('test/user_hook_tests.coffee', 'server');
-});
+//   api.addFiles('lib/route.coffee', 'server');
+//   api.addFiles('test/api_tests.coffee', 'server');
+//   api.addFiles('test/route_unit_tests.coffee', 'server');
+//   api.addFiles('test/authentication_tests.coffee', 'server');
+//   api.addFiles('test/user_hook_tests.coffee', 'server');
+// });
